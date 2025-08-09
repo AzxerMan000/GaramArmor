@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+</head>
+<body>
+  <h1>Admin Panel - Whitelist Management</h1>
+  <form method="post">
+    <label>Add Discord ID: <input type="text" name="discord_id" required /></label>
+    <button type="submit">Add</button>
+  </form>
+  <h2>Whitelisted Users</h2>
+  <ul>
+    {% for user_id in whitelist %}
+      <li>{{ user_id }}</li>
+    {% endfor %}
+  </ul>
+  <p><a href="/">Home</a> | <a href="/logout">Logout</a></p>
+</body>
+</html>

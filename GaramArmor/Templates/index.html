@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to GaramArmor</title>
+</head>
+<body>
+  <h1>Welcome to GaramArmor</h1>
+  {% if user %}
+    <p>Hello, {{ user.username }}#{{ user.discriminator }}!</p>
+    <p><a href="/script">Get Script</a></p>
+    <p><a href="/logout">Logout</a></p>
+    <p><a href="/admin">Admin Panel</a></p>
+  {% else %}
+    <p><a href="/login">Login with Discord</a></p>
+  {% endif %}
+</body>
+</html>
